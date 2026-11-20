@@ -1,0 +1,13 @@
+[package]
+name = "tauri-plugin-vista-android"
+version = "0.1.0"
+description = "Vista's Android-only native parts: yt-dlp with its own Python, and the video player"
+edition = "2021"
+links = "tauri-plugin-vista-android"
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+
+[build-dependencies]
+tauri-plugin = { version = "2", features = ["build"] }

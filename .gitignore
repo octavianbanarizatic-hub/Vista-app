@@ -1,0 +1,9 @@
+node_modules/
+dist/
+src-tauri/target/
+src-tauri/gen/schemas/
+# Android release signing key and its passwords (see README).
+.signing/
+# Scratch scripts and sample responses used while writing the parsers.
+probe/
+*.apk

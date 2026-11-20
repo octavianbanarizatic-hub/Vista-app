@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Vista</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <button class="icon-btn" id="back" title="Back" data-icon="back" hidden></button>
+        <div class="brand" id="brand"><span class="brand-mark"></span>Vista</div>
+        <h1 class="top-title" id="top-title" hidden></h1>
+        <form class="search" id="search-form" hidden>
+          <input id="search-input" type="search" placeholder="Search YouTube" enterkeyhint="search" autocomplete="off" spellcheck="false" />
+        </form>
+        <span class="spacer"></span>
+        <button class="icon-btn" id="refresh" title="Check for new videos" data-icon="refresh" hidden></button>
+        <button class="icon-btn round" id="search-open" title="Search" data-icon="search"></button>
+      </header>
+
+      <main class="view" id="view"></main>
+      <div class="pull" id="pull" data-icon="refresh"></div>
+      <div class="search-panel" id="search-panel" hidden></div>
+
+      <div class="mini" id="mini" hidden>
+        <img class="mini-thumb" id="mini-thumb" alt="" />
+        <div class="mini-text">
+          <div class="mini-title" id="mini-title"></div>
+          <div class="mini-channel" id="mini-channel"></div>
+        </div>
+        <button class="icon-btn" id="mini-toggle" title="Play or pause" data-icon="play"></button>
+        <button class="icon-btn" id="mini-next" title="Next in queue" data-icon="skip" hidden></button>
+        <button class="icon-btn" id="mini-close" title="Close" data-icon="close"></button>
+        <div class="mini-progress"><i id="mini-progress"></i></div>
+      </div>
+
+      <nav class="tabs">
+        <button class="tab" data-tab="home" data-icon="home">Home</button>
+        <button class="tab" data-tab="subscriptions" data-icon="subs">Subscriptions</button>
+        <button class="tab" data-tab="library" data-icon="library">Library</button>
+      </nav>
+    </div>
+
+    <section class="watch" id="watch" hidden>
+      <div class="player-slot" id="player-slot">
+        <div class="slot-overlay" id="slot-overlay"></div>
+      </div>
+      <div class="watch-body" id="watch-body"></div>
+    </section>
+
+    <div class="sheet-root" id="sheet-root" hidden></div>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <input type="file" id="file-input" accept=".csv,text/csv,text/comma-separated-values" hidden />
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
